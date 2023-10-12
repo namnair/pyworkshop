@@ -1,0 +1,9 @@
+import re
+url = input("Enter a URL: ")
+regex= r'^https?://(www\.)?([a-zA-Z0-9.-]+).*'
+match = re.match(regex, url)
+if match:
+    domain = match.group(2)
+    print(f"Domain extracted: {domain}")
+else:
+    print("Invalid")
